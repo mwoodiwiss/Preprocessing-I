@@ -53,7 +53,122 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
+html body {
     height: 100%;
+}
+
+@Bmargin: 15px;
+
+@font1: 40px;
+
+@font2: 24px;
+
+@font3: 18px;
+
+h1 {
+	font-size: @font1;
+    margin-bottom: @Bmargin;
+	font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+	font-size: @font2;
+    margin-bottom: @Bmargin;
+	font-family: 'Rubik', sans-serif;
+}
+
+.flex {
+	display: flex;
+	margin: 20px;
+	}
+
+.link {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+.main-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	@media (max-width: 500px){
+		width: 98%px;
+		padding: 20px
+	}
+
+	
+
+	.menu {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-size: @font3;
+    	margin-bottom: @Bmargin;
+    	font-family: 'Rubik', sans-serif;
+		.flex();
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			
+		}
+
+		a {
+			.link();
+			padding-left: 10px;
+			@media (max-width: 500px) {
+				margin-bottom: @Bmargin;
+			}
+		}
+	}
+
+	.header {
+		.flex();
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+		width: 98%%;
+		@media (max-width: 500px) {
+			flex-direction: column-reverse;
+		}
+		
+
+		.column1 {
+			text-align: center;
+			.flex();
+			flex-direction: column;
+			align-content: center;
+			align-items: center;
+
+			a {
+				
+				.flex();
+				flex-direction: row;
+				flex-wrap: wrap;
+				border: 1px solid black;
+				padding: 2px 15px;
+				font-size: @font3;
+				margin: 0 auto;
+				.link();
+			}
+		}
+
+	}
+
+	.content {
+
+		p {
+			margin-bottom: @Bmargin;
+		}
+		
+	}
+
+	footer {
+		width: 100%;
+		text-align: center;
+		margin: 10px;
+	}
 }
 
